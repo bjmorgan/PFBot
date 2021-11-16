@@ -21,7 +21,7 @@ function formatAndSendTweet(event) {
     const formattedEthPrice = formattedUnits * tokenEthPrice;
     const formattedUsdPrice = formattedUnits * tokenUsdPrice;
 
-    const tweetText = `${assetName} was purchased for ${formattedEthPrice}${ethers.constants.EtherSymbol} ($${Number(formattedUsdPrice).toFixed(2)}) #NFT ${openseaLink}`;
+    const tweetText = `${assetName} was purchased for ${formattedEthPrice}${ethers.constants.EtherSymbol} ($${Number(formattedUsdPrice).toFixed(2)}) ${openseaLink}`;
 
     console.log(tweetText);
 
@@ -38,7 +38,7 @@ function formatAndSendTweet(event) {
     return tweet.tweet(tweetText);
 }
 
-const getParams = (slug, lastSaleTime) = ({
+const getParams = (slug, lastSaleTime) => ({
     collection_slug: slug,
     event_type: 'successful',
     occurred_after: lastSaleTime,
