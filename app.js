@@ -21,7 +21,7 @@ function formatAndSendTweet(event) {
     const formattedEthPrice = formattedUnits * tokenEthPrice;
     const formattedUsdPrice = formattedUnits * tokenUsdPrice;
 
-    const tweetText = `${assetName} bought for ${formattedEthPrice}${ethers.constants.EtherSymbol} ($${Number(formattedUsdPrice).toFixed(2)}) #hastag ${openseaLink}`;
+    const tweetText = `${assetName} was purchased for ${formattedEthPrice}${ethers.constants.EtherSymbol} ($${Number(formattedUsdPrice).toFixed(2)}) #pixelfoxes ${openseaLink}`;
 
     console.log(tweetText);
 
